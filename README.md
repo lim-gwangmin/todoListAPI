@@ -9,16 +9,13 @@ form-data 이용
 - Schema : 
 <pre>
    <code>
+   * response
    {
       result: Boolean
       data: Array,
    }
-   </code>
-</pre>
-status : 200
-<pre>
-   <code>
-   {
+
+   200: {
       result: true,
       data: [
          {
@@ -29,12 +26,8 @@ status : 200
          }
       ]
    }
-   </code>
-</pre>
-status : 500
-<pre>
-   <code>
-   {
+
+   500: {
       result: false,
       message: 에러메시지
    }
@@ -46,15 +39,14 @@ status : 500
 - Schema :
 <pre>
    <code>
-   request: {
+   * request
+   {
       text: String,
    }
-   </code>
-</pre>
-status : 200
-<pre>
-   <code>
-   {
+
+   * status 
+
+   200: {
       result: true,
       data: [
          {
@@ -65,12 +57,8 @@ status : 200
          }
       ]
    }
-   </code>
-</pre>
-status : 500
-<pre>
-   <code>
-   {
+
+   500: {
       result: false,
       message: 에러메시지
    }
@@ -80,10 +68,11 @@ status : 500
 - url: localhost:3000/todos/todoid/:id
 - method : DELETE
 - Schema :
-status : 200
 <pre>
    <code>
-   {
+   * status
+
+   200: {
       result: true,
       data: [
          {
@@ -94,12 +83,8 @@ status : 200
          }
       ]
    }
-   </code>
-</pre>
-status : 500
-<pre>
-   <code>
-   {
+   
+   500: {
       result: false,
       message: 에러메시지
    }
@@ -111,9 +96,9 @@ status : 500
 - Schema :
 <pre>
    <code>
-   status
+   * status
 
-   200 :{
+   200: {
       result: true,
       data: [
          {
@@ -124,6 +109,7 @@ status : 500
          }
       ]
    }
+
    500: {
       result: false,
       message: 에러메시지
