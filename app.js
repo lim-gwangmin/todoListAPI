@@ -1,11 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
-const url = `mongodb+srv://root:xHtzS0YfTkoGNE7e@cluster0.0el4m.mongodb.net/Cluster0`;
+const url = process.env.MONGO_DB_URL;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const form_data = multer();
-
+console.log(process.env.MONGO_DB_URL)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(form_data.array());
