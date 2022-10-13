@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const url = process.env.MONGO_DB_URL;
@@ -6,7 +7,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const form_data = multer();
-console.log(process.env.MONGO_DB_URL)
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(form_data.array());
