@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const url = process.env.MONGO_DB_URL;
 const mongoose = require('mongoose');
@@ -11,7 +12,7 @@ const form_data = multer();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(form_data.array());
-
+app.use(cors());
 
 mongoose.connect(url)
   .then(() => {
