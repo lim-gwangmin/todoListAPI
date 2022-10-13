@@ -109,10 +109,11 @@ status : 500
 - url: localhost:3000/todos/todoid/:id
 - method : PUT
 - Schema :
-status : 200
 <pre>
    <code>
-   {
+   status
+
+   200 :{
       result: true,
       data: [
          {
@@ -123,12 +124,7 @@ status : 200
          }
       ]
    }
-   </code>
-</pre>
-status : 500
-<pre>
-   <code>
-   {
+   500: {
       result: false,
       message: 에러메시지
    }
