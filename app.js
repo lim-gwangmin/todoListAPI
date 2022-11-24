@@ -18,12 +18,12 @@ mongoose.connect(url)
   .then(() => {
       console.log("Connected to MongoDB => UserAPI");
   })
-//    .then(app.listen(3000, res => {
-//       console.log('3000 port on');
-//   }))
-  .then(app.listen('/', res => {
-   console.log('3000 port on');
-}))
+   .then(app.listen(3000, res => {
+      console.log('3000 port on');
+  }))
+//   .then(app.listen('/', res => {
+//    console.log('3000 port on');
+// }))
   .catch(err => {
     console.log(err);
   });
