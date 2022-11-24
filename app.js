@@ -18,13 +18,15 @@ mongoose.connect(url)
   .then(() => {
       console.log("Connected to MongoDB => UserAPI");
   })
-   .then(app.listen(3000, res => {
+   .then(app.listen('https://lim-gwangmin.github.io/todoListAPI/', res => {
       console.log('3000 port on');
   }))
   .catch(err => {
     console.log(err);
   });
 
+
+app.use('/todos', require('./routes/todos')); 
 
 
 app.use('/todos', require('./routes/todos')); 

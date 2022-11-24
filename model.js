@@ -40,3 +40,15 @@ TodoListSchema.statics.create = function (payload) {
  
  // Create Model & Export
  module.exports = mongoose.model('Todo', TodoListSchema);
+
+
+
+
+
+ 
+ const NameSchema = new mongoose.Schema({
+   id: { type: Number, required: true, unique: true },
+   index: { type: Number, required: true },
+});
+
+module.exports = mongoose.model('name', NameSchema);
