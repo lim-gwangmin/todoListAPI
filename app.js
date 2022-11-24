@@ -18,7 +18,7 @@ mongoose.connect(url)
   .then(() => {
       console.log("Connected to MongoDB => UserAPI");
   })
-   .then(app.listen('https://lim-gwangmin.github.io/todoListAPI/', res => {
+   .then(app.listen('/', res => {
       console.log('3000 port on');
   }))
   .catch(err => {
