@@ -29,7 +29,7 @@ mongoose.connect(url)
   });
 
 
-app.use('/todos', require('./routes/name')); 
+app.use('/name', require('./routes/name')); 
 
   
 app.use('/todos', require('./routes/todos')); 
