@@ -18,16 +18,19 @@ mongoose.connect(url)
   .then(() => {
       console.log("Connected to MongoDB => UserAPI");
   })
-   .then(app.listen('/', res => {
-      console.log('3000 port on');
-  }))
+//    .then(app.listen(3000, res => {
+//       console.log('3000 port on');
+//   }))
+  .then(app.listen('/', res => {
+   console.log('3000 port on');
+}))
   .catch(err => {
     console.log(err);
   });
 
 
-app.use('/todos', require('./routes/todos')); 
+app.use('/todos', require('./routes/name')); 
 
-
+  
 app.use('/todos', require('./routes/todos')); 
 // use method 첫번째 매개변수는 url을 가르킨다
